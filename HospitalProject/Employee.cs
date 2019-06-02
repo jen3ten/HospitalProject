@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
+using HospitalProject;
 
 namespace Hospital2
 {
@@ -47,6 +48,19 @@ namespace Hospital2
                 Console.WriteLine("Number: " + EmployeeNumber);
             }
 
+         
+        }
+
+        public virtual void DrawBlood(Patient currentPatient)
+        {
+            currentPatient.BloodLevel -= 1;
+            Console.WriteLine("The Doctor has drawn blood from the patient.");
+        }
+
+        public virtual void CarePatient(Patient currentPatient)
+        {
+            currentPatient.HealthLevel += 1;
+            Console.WriteLine("The Doctor has cared for the patient");
 
         }
     }

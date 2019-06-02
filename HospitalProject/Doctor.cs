@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HospitalProject;
+using System;
 using System.Text;
 
 namespace Hospital2
@@ -24,6 +25,21 @@ namespace Hospital2
         {
             base.PayEmployee();
             Console.WriteLine("Salary: " + EmployeeSalary);
+        }
+
+        public override void DrawBlood(Patient currentPatient)
+        {
+            currentPatient.BloodLevel -= 1;
+            Console.WriteLine("The Doctor has drawn blood from the patient.");
+            Console.ReadLine();
+        }
+
+        public override void CarePatient(Patient currentPatient)
+        {
+            currentPatient.HealthLevel += 1;
+            Console.WriteLine("The Doctor has cared for the patient");
+            Console.ReadLine();
+
         }
     }
 }

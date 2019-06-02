@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HospitalProject;
+using System;
 using System.Collections.Generic;
 
 namespace Hospital2
@@ -17,6 +18,8 @@ namespace Hospital2
             Employee anonnurse = new Nurse("Nurse Anonymous", 227, 25);
             Employee farley = new Janitor("Farley", 228, true);
             Employee janet = new Receptionist("Janet Jones", 229, true);
+            Patient testPatient = new Patient("Sickly Jones");
+
             Menu menu = new Menu();
 
             listOfEmployees.Add(doctorOctopus);
@@ -86,6 +89,44 @@ namespace Hospital2
                         break;
                     case "4":
                         {
+                            Console.WriteLine("Choose who you would like to draw blood from the Patient.");
+                            Console.WriteLine("1. Doctor");
+                            Console.WriteLine("2. Nurse");
+                            string drawChoice = (Console.ReadLine());
+                            switch (drawChoice)
+                            {
+                                case "1":
+                                    doctorDrey.DrawBlood(testPatient);
+                                    break;
+                                case "2":
+                                    ratchet.DrawBlood(testPatient);
+                                    break;
+                                default:
+                                    return;
+                                
+
+                                
+                            }
+
+                        }
+                        break;
+                    case "5":
+                        {
+                            Console.WriteLine("Choose who you would like to care for the Patient.");
+                            Console.WriteLine("1. Doctor");
+                            Console.WriteLine("2. Nurse");
+                            string careChoice = (Console.ReadLine());
+                            switch (careChoice)
+                            {
+                                case "1":
+                                    doctorDrey.CarePatient(testPatient);
+                                    break;
+                                case "2":
+                                    ratchet.CarePatient(testPatient);
+                                    break;
+                                default:
+                                    return;
+                            }
 
                         }
                         break;
