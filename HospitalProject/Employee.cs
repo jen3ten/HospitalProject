@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
-using HospitalProject;
+
 
 namespace Hospital2
 {

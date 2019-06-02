@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HospitalProject
+namespace Hospital2
 {
      public class Patient
     {
