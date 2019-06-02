@@ -1,12 +1,120 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace HospitalProject
+namespace Hospital2
 {
-    class Program
+    public class Program
     {
+
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            List<Employee> listOfEmployees = new List<Employee>();
+            Employee doctorOctopus = new Doctor("Doctor Octopus", 224, "Heart");
+            Employee ratchet = new Nurse("Nurse Ratchet", 225, 15);
+            Employee doctorDrey = new Doctor("Doctor Drey", 226, "Lung");
+            Employee anonnurse = new Nurse("Nurse Anonymous", 227, 25);
+            Employee farley = new Janitor("Farley", 228, true);
+            Employee janet = new Receptionist("Janet Jones", 229, true);
+            Menu menu = new Menu();
+
+            listOfEmployees.Add(doctorOctopus);
+            listOfEmployees.Add(ratchet);
+            listOfEmployees.Add(doctorDrey);
+            listOfEmployees.Add(anonnurse);
+            listOfEmployees.Add(farley);
+            listOfEmployees.Add(janet);
+            string userInput = "";
+
+            while (userInput != "9")
+            {
+                Console.Clear();
+                menu.ShowMainMenu();
+                userInput = Console.ReadLine();
+
+                switch (userInput)
+                {
+                    case "1":
+                        {
+                            Console.Clear();
+
+                            for (int i = 0; i < listOfEmployees.Count; i++)
+                            {
+                                Console.Write(i + " ");
+                                listOfEmployees[i].PrintEmployee();
+
+                            }
+                            Console.ReadKey();
+                        }
+                        break;
+                    case "2":
+                        {
+                            Console.Clear();
+                            doctorDrey.PayEmployee();
+                            anonnurse.PayEmployee();
+                            ratchet.PayEmployee();
+                            doctorDrey.PayEmployee();
+                            farley.PayEmployee();
+                            janet.PayEmployee();
+                            Console.ReadKey();
+
+
+                        }
+                        break;
+                    case "3":
+                        {
+                            Console.Clear();
+                            for (int i = 0; i < listOfEmployees.Count; i++)
+                            {
+                                Console.Write(i + " ");
+                                listOfEmployees[i].PrintEmployee();
+
+                            }
+                            Console.WriteLine("please select the number of employee you want to choose");
+                            int choiceInput = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine();
+                            Console.WriteLine();
+                            Console.WriteLine();
+                            Console.Write("you have chosen: ");
+                            listOfEmployees[choiceInput].PrintEmployee();
+                            Console.WriteLine("press any key to continue");
+                            Console.ReadKey();
+
+
+                        }
+                        break;
+                    case "4":
+                        {
+
+                        }
+                        break;
+                    case "9":
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Goodbye");
+                            Console.ReadKey();
+                        }
+                        break;
+                }
+            }
+
+            //for (int i = 0; i < listOfEmployees.Count; i++)
+            //{
+            //    Console.Write(i + " ");
+            //    listOfEmployees[i].PrintEmployee();
+
+            //}
+            //doctorDrey.PayEmployee();
+            //anonnurse.PayEmployee();
+            //doctorDrey.PayEmployee();
+            //farley.PayEmployee();
+            //janet.PayEmployee();
+            Console.WriteLine("DONE");
+            Console.ReadKey();
+
         }
+
     }
+
 }
