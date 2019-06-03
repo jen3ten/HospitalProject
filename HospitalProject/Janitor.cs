@@ -7,13 +7,13 @@ namespace Hospital2
     class Janitor : Employee
     {
         public bool IsSweeping { get; set; }
-        public double EmployeeSalary { get; set; }
+        
 
 
         public Janitor(string employeeName, int employeeNumber, bool isSweeping) : base(employeeName, employeeNumber, 40000)
         {
             IsSweeping = isSweeping;
-            EmployeeSalary = 40000.00;
+            
         }
         public override void PrintEmployee()
         {
@@ -23,7 +23,7 @@ namespace Hospital2
         public override void PayEmployee()
         {
             base.PayEmployee();
-            Console.WriteLine("Salary: " + EmployeeSalary);
+            Console.WriteLine("Salary: " + base.Salary);
         }
     }
 }

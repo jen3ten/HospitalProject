@@ -7,13 +7,12 @@ namespace Hospital2
     class Receptionist : Employee
     {
         public bool IsOnThePhone { get; set; }
-        public double EmployeeSalary { get; set; }
+        
 
-
-        public Receptionist(string employeeName, int employeeNumber, bool isOnThePhone) : base(employeeName, employeeNumber, 40000)
+        public Receptionist(string employeeName, int employeeNumber, bool isOnThePhone) : base(employeeName, employeeNumber, 45000)
         {
             IsOnThePhone = isOnThePhone;
-            EmployeeSalary = 45000.00;
+           
         }
         public override void PrintEmployee()
         {
@@ -23,7 +22,7 @@ namespace Hospital2
         public override void PayEmployee()
         {
             base.PayEmployee();
-            Console.WriteLine("Salary: " + EmployeeSalary);
+            Console.WriteLine("Salary: " + base.Salary);
         }
     }
 }

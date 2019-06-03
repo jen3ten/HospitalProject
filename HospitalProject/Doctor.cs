@@ -7,13 +7,13 @@ namespace Hospital2
     public class Doctor : Employee
     {
         public string Specialty { get; set; }
-        public double EmployeeSalary { get; set; }
+       
 
         
         public Doctor(string employeeName, int employeeNumber, string specialty) : base(employeeName, employeeNumber, 90000)
         {
             Specialty = specialty;
-            EmployeeSalary = 90000;
+            
 
         }
 
@@ -25,7 +25,7 @@ namespace Hospital2
         public override void PayEmployee()
         {
             base.PayEmployee();
-            Console.WriteLine("Salary: " + EmployeeSalary);
+            Console.WriteLine("Salary: " + base.Salary);
         }
 
         public override void DrawBlood(Patient currentPatient)
