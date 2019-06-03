@@ -9,14 +9,7 @@ namespace Hospital2
         public int NumberOfPatients { get; set; }
         public double EmployeeSalary { get; set; }
 
-        //public Nurse(string employeeName, int employeeNumber, double salary) : base(employeeName, employeeNumber, salary)
-        //{
-
-        //}
-        //public Nurse(string employeeName, int employeeNumber) : base(employeeName, employeeNumber, 50000)
-        //{
-
-        //}
+        
         public Nurse(string employeeName, int employeeNumber, int numberOfPatients) : base(employeeName, employeeNumber, 50000)
         {
             NumberOfPatients = numberOfPatients;

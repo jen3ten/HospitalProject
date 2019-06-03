@@ -140,17 +140,7 @@ namespace Hospital2
                 }
             }
 
-            //for (int i = 0; i < listOfEmployees.Count; i++)
-            //{
-            //    Console.Write(i + " ");
-            //    listOfEmployees[i].PrintEmployee();
-
-            //}
-            //doctorDrey.PayEmployee();
-            //anonnurse.PayEmployee();
-            //doctorDrey.PayEmployee();
-            //farley.PayEmployee();
-            //janet.PayEmployee();
+            
             Console.WriteLine("DONE");
             Console.ReadKey();
 
