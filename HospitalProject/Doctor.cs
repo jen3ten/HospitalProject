@@ -13,7 +13,8 @@ namespace Hospital2
         public Doctor(string employeeName, int employeeNumber, string specialty) : base(employeeName, employeeNumber, 90000)
         {
             Specialty = specialty;
-            
+            EmployeeSalary = 90000;
+
         }
 
         public override void PrintEmployee()
