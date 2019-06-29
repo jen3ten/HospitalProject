@@ -2,7 +2,7 @@
 using System;
 using System.Text;
 
-namespace Hospital2
+namespace HospitalProject
 {
     public class Nurse : Employee
     {

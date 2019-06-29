@@ -3,7 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 
 
-namespace Hospital2
+namespace HospitalProject
 {
     public class Employee
     {
@@ -47,8 +47,9 @@ namespace Hospital2
                 Console.WriteLine("Name: " + EmployeeName);
                 Console.WriteLine("Number: " + EmployeeNumber);
             }
+            Console.WriteLine("Salary: " + this.Salary);
 
-         
+
         }
 
         public virtual void DrawBlood(Patient currentPatient)

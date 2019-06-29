@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Hospital2
+namespace HospitalProject
 {
     public class Program
     {
@@ -54,12 +54,16 @@ namespace Hospital2
                     case "2":
                         {
                             Console.Clear();
-                            doctorDrey.PayEmployee();
-                            anonnurse.PayEmployee();
-                            ratchet.PayEmployee();
-                            doctorDrey.PayEmployee();
-                            farley.PayEmployee();
-                            janet.PayEmployee();
+                            foreach(var employee in listOfEmployees)
+                            {
+                                employee.PayEmployee();
+                            }
+                            //doctorDrey.PayEmployee();
+                            //anonnurse.PayEmployee();
+                            //ratchet.PayEmployee();
+                            //doctorDrey.PayEmployee();
+                            //farley.PayEmployee();
+                            //janet.PayEmployee();
                             Console.ReadKey();
 
 

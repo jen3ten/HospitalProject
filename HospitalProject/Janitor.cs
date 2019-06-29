@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Hospital2
+namespace HospitalProject
 {
     class Janitor : Employee
     {
